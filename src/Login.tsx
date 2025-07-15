@@ -1,69 +1,82 @@
 import 'react-native';
-import {View, Text, StyleSheet, TextInput, TouchableOpacity} from 'react-native';
+import {View, Text, StyleSheet, TextInput, TouchableOpacity, Image} from 'react-native';
 
-function Login() {
+const Login = () => {
 return(
-    <View style={css.container}>
-        <Text style={css.msgLogin}>Faça seu Login ou Cadastro</Text>
-        <View style={css.container2}>
-            <TextInput style={css.input} placeholder='E-mail'></TextInput>
-            <View style={css.break}></View>
-            <TextInput style={css.input} placeholder='Senha'></TextInput>
-            <TouchableOpacity style={css.botao}>
-            <Text>Enviar</Text>
+    <View style={css.background}>
+        <View style={css.container}>
+            <Image source={require('../assets/logo.png')} style={css.logo}></Image>
+            <Text style={css.msgLogin}>Faça seu Login ou Cadastro</Text>
+            <View style={css.container2}>
+                <TextInput style={css.input} placeholder='✉️ E-mail'></TextInput>
+                <TextInput style={css.input} placeholder='🔒 Senha'></TextInput>
+                <TouchableOpacity style={css.button1}>
+                <Text>Enviar</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={css.button2}>
+                <Text>Quero continuar sem uma conta</Text>
             </TouchableOpacity>
-        <TouchableOpacity style={css.noLogin}>
-            <Text>Quero continuar sem uma conta</Text>
-        </TouchableOpacity>
+            </View>
         </View>
-    </View> 
+    </View>
 )}
 
 const css = StyleSheet.create({
-    container: {
+    background: {
         flex: 1,
-        backgroundColor: '#309606',
-        position: 'relative',
+        backgroundColor: '#ccffb8',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    container: {
+        padding: 20,
+        backgroundColor: '#fefffeff',
+        alignItems: 'center',
+        borderRadius: 35,
+        width: '90%',
+    },
+    logo: {
+        borderRadius: 100,
+        width: 100,
+        height: 100,
+        marginBottom: 15,
     },
     msgLogin: {
         textAlign: 'center',
-        top: 200,
-        color: 'white',
+        color: 'black',
         fontSize: 26,
         fontWeight: 'bold',
+        marginBottom: 30,
     },
     container2: {
-        flex: 1,
         position: 'relative',
         alignItems: 'center',
+        width: '100%',
     },
     input: {
-        top: '44%',
-        width: '70%',
-        backgroundColor: 'white',
+        width: '100%',
+        backgroundColor: '#ccffb8',
         color: 'black',
-        borderRadius: 40
+        borderRadius: 40,
+        marginBottom: 10,
+        paddingLeft: 15,
     },
-    break: {
-        height: 10
-    },
-    botao: {
-        backgroundColor: '#cccccc',
+    button1: {
+        backgroundColor: '#309606',
         borderRadius: 50,
-        width: '70%',
+        width: '100%',
         padding: 10,
         alignItems: 'center',
-        top: '47%',
+        marginTop: 16,
+        marginBottom: 30,
     },
-    noLogin: {
-        backgroundColor: '#cccccc',
+    button2: {
+        backgroundColor: '#bebebeff',
         borderRadius: 50,
-        width: '55%',
+        width: '100%',
         padding: 10,
         alignItems: 'center',
-        alignSelf: 'center',
-        position: 'absolute',
-        bottom: 30,
+        marginTop: 10,
     }
 })
 
