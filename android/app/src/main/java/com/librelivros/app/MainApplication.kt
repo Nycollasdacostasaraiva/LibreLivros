@@ -1,4 +1,4 @@
-package com.projeto01
+package com.LibreLivros
 
 import android.app.Application
 import com.facebook.react.PackageList

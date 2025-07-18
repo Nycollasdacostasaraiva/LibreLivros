@@ -77,9 +77,9 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace "com.projeto01"
+    namespace "com.LibreLivros"
     defaultConfig {
-        applicationId "com.projeto01"
+        applicationId "com.LibreLivros"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

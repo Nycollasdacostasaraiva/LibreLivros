@@ -1,6 +1,11 @@
-import 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { Routes } from './src/routes/index-routes.tsx'
+import StackRoutes from './src/routes/unlogged-stack-routes';
 
- import Inicio from './src/Inicio'; 
- /* import Login from './src/Login' */
+export function App() {
+    return(
+            <Routes/>
+    )
+}
 
-export default Inicio;
+export default App 
